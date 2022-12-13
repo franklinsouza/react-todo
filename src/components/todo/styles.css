@@ -1,0 +1,45 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #21212b;
+  margin-bottom: .7rem;
+  padding: 1rem;
+  border-radius: 7px;
+}
+
+.todo.done .content {
+  text-decoration: line-through;
+}
+
+.content {
+  position: relative;
+  padding-left: 2.1rem;
+}
+
+.check {
+  position: absolute;
+  opacity: 0;
+}
+
+.check:checked ~ .indicator {
+  color: #FFF;
+  background: #fc76a1 url(
+    data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIxMiIgaGVpZ2h0PSI5IiB2aWV3Qm94PSIwIDAgMTIgOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHBhdGggZD0iTTQuNTc1IDguOTc3cy0uNDA0LS4wMDctLjUzNi0uMTY1TC4wNTcgNS42NGwuODI5LTEuMjI3TDQuNDcgNy4yNjggMTAuOTIxLjA4NmwuOTIzIDEuMTAzLTYuODYzIDcuNjRjLS4xMzQtLjAwMy0uNDA2LjE0OC0uNDA2LjE0OHoiIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPg0KPC9zdmc+
+  ) 50% 40% no-repeat;
+}
+
+.indicator {
+  border-radius: 7px;
+  position: absolute;
+  left: 0;
+  width: 1.4rem; 
+  height: 1.4rem;
+  background-color: #21212b;
+  border: 3px solid #fc76a1;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
